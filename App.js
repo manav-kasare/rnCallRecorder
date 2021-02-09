@@ -4,6 +4,8 @@ import {AudioRecorder, AudioUtils} from 'react-native-audio';
 import RNImmediatePhoneCall from 'react-native-immediate-phone-call';
 import {PERMISSIONS, request} from 'react-native-permissions';
 
+import CallDetectorManager from 'react-native-call-detection';
+
 let audioPath = AudioUtils.DocumentDirectoryPath + '/test.aac';
 
 var Sound = require('react-native-sound');
@@ -13,6 +15,15 @@ export default function App() {
   const [onCall, setOnCall] = React.useState(false);
   const [isPlaying, setIsPlaying] = React.useState(false);
   const [show, setShow] = React.useState(false);
+
+  React.useEffect(() => {
+    new CallDetectorManager((event, phoneNumber) => {
+      if (event === 'Disconnected') {
+        console.log('disconnected');
+        handleStopRecording();
+      }
+    });
+  }, []);
 
   const handleCallNow = async () => {
     setShow(false);
@@ -37,7 +48,7 @@ export default function App() {
         sound.play((success) => {
           if (!success) {
             setIsPlaying(false);
-            Alert.alert('Error', 'no records found');
+            alert('Error', 'no records found');
           }
         });
       }, 100);
@@ -45,6 +56,7 @@ export default function App() {
   };
 
   const stopAudio = () => {
+    setIsPlaying(false);
     sound.stop();
   };
 

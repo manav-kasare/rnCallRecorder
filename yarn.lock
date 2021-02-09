@@ -5568,6 +5568,11 @@
   "resolved" "https://registry.npmjs.org/react-native-audio/-/react-native-audio-4.3.0.tgz"
   "version" "4.3.0"
 
+"react-native-call-detection@^1.9.0":
+  "integrity" "sha512-UaF/I1cp2UnIbdCh3UmrFIA4an8El1gIBM6uIbM+OYCrfe5btIj7DYtjqtNoeKOtF7fap32m37v6lafQ9SZHpg=="
+  "resolved" "https://registry.npmjs.org/react-native-call-detection/-/react-native-call-detection-1.9.0.tgz"
+  "version" "1.9.0"
+
 "react-native-callkeep@^4.0.1":
   "integrity" "sha512-TCzIL4Yc8yGqhk84tQW8BAFuoiNNC64J2fkyMFfKd/sDGvIKveEC/JvzzgmMMibQY9J85ful64FyWuvGU1XODw=="
   "resolved" "https://registry.npmjs.org/react-native-callkeep/-/react-native-callkeep-4.0.1.tgz"
@@ -5618,7 +5623,7 @@
     "use-subscription" "^1.0.0"
     "whatwg-fetch" "^3.0.0"
 
-"react-native@^0.63.0-0", "react-native@>=0.40.0", "react-native@>=0.62.0-rc.0 <0.64.0", "react-native@>=0.63.3", "react-native@>=0.8.0", "react-native@0.63.4":
+"react-native@^0.63.0-0", "react-native@>=0.26.0", "react-native@>=0.40.0", "react-native@>=0.62.0-rc.0 <0.64.0", "react-native@>=0.63.3", "react-native@>=0.8.0", "react-native@0.63.4":
   "integrity" "sha512-I4kM8kYO2mWEYUFITMcpRulcy4/jd+j9T6PbIzR0FuMcz/xwd+JwHoLPa1HmCesvR1RDOw9o4D+OFLwuXXfmGw=="
   "resolved" "https://registry.yarnpkg.com/react-native/-/react-native-0.63.4.tgz"
   "version" "0.63.4"
